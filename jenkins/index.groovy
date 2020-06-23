@@ -40,7 +40,7 @@ pipeline {
                     ]) {
 
                         sh "echo '${password}' | sudo -S docker build ${WORKSPACE}/auto -t evdokimov_nginx"
-                        sh "echo '${password}' | sudo -S docker run -d -p 8516:80 --name evdokimov_ng -v /home/adminci/is_mount_dir:/stat evdokimov_nginx"
+                        sh "echo '${password}' | sudo -S docker run -d -p 8516:80 --name evdokimov_ng -v /home/adminci/mount_vic:/stat evdokimov_nginx"
                     }
                 }
             }
